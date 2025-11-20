@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Piezas en MDF</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="imagen/png" href="Logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">Print <span>Lab</span></div>
+      <nav class="nav">
+        <a href="index.html">Inicio</a>
+        <a href="mdf.html" class="active">Piezas en MDF</a>
+        <a href="#catalogos">Catálogos 3D</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- HERO PARA MDF -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Piezas personalizadas en MDF</h1>
+          <p>Explora nuestros diseños, catálogos y opciones de personalización para tus proyectos de corte y grabado.</p>
+        </div>
+        <div class="hero-media">
+          <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4e?q=80&auto=format&fit=crop" alt="MDF hero">
+        </div>
+      </div>
+    </section>
+
+    <!-- CATÁLOGOS / GRID -->
+    <section class="section">
+      <div class="container">
+
+        <div class="section-head">
+          <h2>Catálogos y ejemplos en MDF</h2>
+          <p class="muted">Busca, filtra y explora diseños listos para personalizar.</p>
+        </div>
+
+        <!-- Filtros -->
+        <div class="filters">
+          <input id="q" type="search" placeholder="Buscar por nombre o etiqueta…">
+          <select id="tag">
+            <option value="todas">Todas</option>
+            <option value="decoracion">Decoración</option>
+            <option value="organizadores">Organizadores</option>
+            <option value="oficina">Oficina</option>
+            <option value="personalizado">Personalizados</option>
+          </select>
+          <button id="reset" class="btn btn-ghost">Restablecer</button>
+        </div>
+
+        <div class="count-row">
+          <span id="count">0 resultado(s)</span>
+        </div>
+
+        <!-- GRID MDF COPIADO DE TU INDEX ORIGINAL -->
+        <div class="grid" data-grid="mdf">
+
+          <article class="card" data-tags="decoracion minimalista">
+            <img src="https://images.unsplash.com/photo-1523419409543-a225764b2f63?q=80" alt="">
+            <div class="card-body">
+              <h3>Catálogo MDF Minimalista</h3>
+              <div class="tags">
+                <span>#decoración</span><span>#estantes</span>
+              </div>
+              <p>Diseños limpios, modulares y fáciles de personalizar.</p>
+              <div class="card-foot">
+                <span class="price">Desde Q150.00</span>
+                <button class="btn btn-small btn-detail"
+                  data-title="Catálogo MDF Minimalista"
+                  data-desc="Diseños limpios, modulares y fáciles de personalizar."
+                  data-tags="#decoración #estantes"
+                  data-img="https://images.unsplash.com/photo-1523419409543-a225764b2f63?q=80"
+                  data-pdf="">Ver detalles</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-tags="organizadores oficina">
+            <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4e?q=80" alt="">
+            <div class="card-body">
+              <h3>Organizadores de Escritorio</h3>
+              <div class="tags">
+                <span>#organizadores</span><span>#oficina</span>
+              </div>
+              <p>Soluciones en MDF para mantener tu espacio ordenado.</p>
+              <div class="card-foot">
+                <span class="price">Desde Q95.00</span>
+                <button class="btn btn-small btn-detail"
+                  data-title="Organizadores de Escritorio"
+                  data-desc="Soluciones en MDF para oficina."
+                  data-tags="#organizadores #oficina"
+                  data-img="https://images.unsplash.com/photo-1519710164239-da123dc03ef4e?q=80"
+                  data-pdf="">Ver detalles</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div id="empty" class="empty hidden">No se encontraron resultados.</div>
+
+      </div>
+    </section>
+    <!-- LLAVEROS PERSONALIZADOS -->
+    <section id="llaveros" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>Llaveros personalizados en MDF</h2>
+          <p class="muted">
+            Diseña tu llavero en línea: elige forma, tamaño, coloca texto, logo y mira la vista previa. Luego descarga tu diseño y envíanos la información por WhatsApp.
+          </p>
+        </div>
+
+        <div class="llavero-layout">
+          <!-- Columna texto/explicación -->
+          <div>
+            <h3>¿Cómo funciona?</h3>
+            <ol class="muted">
+              <li>Completa los datos del pedido (cantidad, tamaño, forma, color).</li>
+              <li>Escribe el texto del frente y reverso, sube tus logos (opcional).</li>
+              <li>Mueve el texto y logo dentro del llavero para acomodarlo.</li>
+              <li>Descarga la imagen del diseño para tener una referencia.</li>
+              <li>Envía la solicitud por WhatsApp y adjunta la imagen descargada.</li>
+            </ol>
+            <p class="muted">
+              Nota: La vista previa es referencial. El acabado final puede variar según colores, corte y grabado láser.
+            </p>
+          </div>
+
+          <!-- Columna configurador + vista previa -->
+          <div class="llavero-panel">
+            <form id="llaveroForm" class="llavero-form">
+              <div class="llavero-group">
+                <label>Nombre</label>
+                <input type="text" id="clienteNombre" placeholder="Tu nombre" required>
+              </div>
+
+              <div class="llavero-group">
+                <label>WhatsApp</label>
+                <input type="tel" id="clienteWhatsapp" placeholder="+502 0000 0000" required>
+              </div>
+
+              <div class="llavero-group two-cols">
+                <div>
+                  <label>Cantidad</label>
+                  <input type="number" id="llaveroCantidad" min="1" value="1">
+                </div>
+                <div>
+                  <label>Tamaño aproximado</label>
+                  <select id="llaveroTamano">
+                    <option value="pequeño">Pequeño (3–4 cm)</option>
+                    <option value="mediano" selected>Mediano (5–6 cm)</option>
+                    <option value="grande">Grande (7–8 cm)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="llavero-group two-cols">
+                <div>
+                  <label>Forma del llavero</label>
+                  <select id="llaveroForma">
+                    <option value="rect">Rectangular</option>
+                    <option value="oval">Ovalado</option>
+                    <option value="circle">Circular</option>
+                  </select>
+                </div>
+                <div>
+                  <label>Color base (aprox.)</label>
+                  <select id="llaveroColor">
+                    <option value="#f5f5f4">MDF natural</option>
+                    <option value="#111827">Negro</option>
+                    <option value="#e5e7eb">Gris claro</option>
+                    <option value="#fef3c7">Madera clara</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="llavero-group">
+                <label>Texto frente</label>
+                <input type="text" id="llaveroTextoFront" placeholder="Texto del lado frente">
+              </div>
+
+              <div class="llavero-group">
+                <label>Texto reverso</label>
+                <input type="text" id="llaveroTextoBack" placeholder="Texto del lado reverso">
+              </div>
+
+              <div class="llavero-group">
+                <label>Tamaño del texto</label>
+                <div class="slider-row">
+                  <input type="range" id="llaveroTextoTam" min="12" max="28" value="18">
+                  <span id="llaveroTextoTamValor">18 px</span>
+                </div>
+              </div>
+
+              <div class="llavero-group">
+                <label>Logo frente (opcional)</label>
+                <input type="file" id="llaveroLogoFront" accept="image/*">
+              </div>
+
+              <div class="llavero-group">
+                <label>Logo reverso (opcional)</label>
+                <input type="file" id="llaveroLogoBack" accept="image/*">
+              </div>
+
+              <div class="llavero-group">
+                <label>Tamaño del logo</label>
+                <div class="slider-row">
+                  <input type="range" id="llaveroLogoTam" min="40" max="120" value="80">
+                  <span id="llaveroLogoTamValor">80%</span>
+                </div>
+              </div>
+
+              <div class="llavero-group">
+                <label>Detalles adicionales</label>
+                <textarea id="llaveroNotas" rows="3" placeholder="Fecha límite, colores especiales, tipo de gancho, etc."></textarea>
+              </div>
+
+              <div class="llavero-group">
+                <p class="muted" id="llaveroPrecioTexto">Precio estimado: Q0.00</p>
+              </div>
+
+              <div class="llavero-actions">
+                <button type="button" id="btnDescargarDiseno" class="btn btn-outline">Descargar diseño (JPG)</button>
+                <button type="submit" class="btn btn-primary">Enviar diseño por WhatsApp</button>
+              </div>
+            </form>
+
+            <!-- Vista previa con frente y reverso -->
+            <div class="llavero-preview-wrapper">
+              <div class="llavero-tabs">
+                <button class="tab-side active" data-side="front">Frente</button>
+                <button class="tab-side" data-side="back">Reverso</button>
+              </div>
+
+              <div class="llavero-preview-area" id="llaveroPreviewArea">
+                <!-- Frente -->
+                <div id="previewFront" class="llavero-preview llavero-shape-rect">
+                  <img id="previewLogoFront" alt="Logo frente" class="llavero-logo draggable hidden">
+                  <div id="previewTextFront" class="llavero-preview-text draggable">Texto frente</div>
+                </div>
+                <!-- Reverso -->
+                <div id="previewBack" class="llavero-preview llavero-shape-rect hidden">
+                  <img id="previewLogoBack" alt="Logo reverso" class="llavero-logo draggable hidden">
+                  <div id="previewTextBack" class="llavero-preview-text draggable">Texto reverso</div>
+                </div>
+              </div>
+
+              <p class="muted help-text">
+                Puedes arrastrar el texto y el logo dentro del llavero. El botón de descarga guarda una imagen del lado activo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© 2025 Print Lab</div>
+      <div class="social">
+        <a href="#">IG</a><a href="#">FB</a><a href="#">WA</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-dialog">
+      <button class="modal-close">✖</button>
+      <div class="modal-grid">
+        <img id="mImg">
+        <div>
+          <h3 id="mTitle"></h3>
+          <p id="mDesc" class="muted"></p>
+          <div id="mTags" class="tags mt-2"></div>
+          <div class="modal-actions">
+            <a id="mPdf" class="btn btn-outline" target="_blank">Ver PDF</a>
+            <a href="index.html#contacto" class="btn btn-primary">Cotizar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

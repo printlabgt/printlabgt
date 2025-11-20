@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />  
+  <title>Print Lab</title>
+  <link rel="icon" type="imagen/png" href="Logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">Print <span>Lab</span></div>
+      <nav class="nav">
+        <a href="#inicio">Inicio</a>
+        <a href="mdf.html">Piezas en MDF</a>
+        <a href="#catalogos">Catálogos 3D</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Diseñamos y producimos tus ideas en <span class="badge">MDF</span> y <span class="badge">3D</span></h1>
+          <p>Personaliza, crea y transforma tus proyectos con tecnología de impresión y corte de alta precisión.</p>
+          <div class="cta-row">
+            <a href="mdf.html" class="btn btn-primary">Ver catálogos MDF</a>
+            <a href="#catalogos" class="btn btn-outline">Ver catálogos 3D</a>
+          </div>
+        </div>
+        <div class="hero-media">
+          <img src="Principal.jpeg" alt="Impresión 3D en acción">
+        </div>
+      </div>
+    </section>
+
+    <!-- EJEMPLOS -->
+    <section id="ejemplos" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Inspiración en acción</h2>
+          <p class="muted">Mira algunos trabajos reales y renders de proyectos recientes.</p>
+        </div>
+        <div class="showcase">
+          <img src="1.jpeg" alt="Proyecto 1">
+          <img src="2.jpeg" alt="Proyecto 2">
+          <img src="3.jpeg" alt="Proyecto 3">
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section contact">
+      <div class="container contact-inner">
+        <!-- Columna izquierda: formulario -->
+        <div class="contact-copy">
+          <h2>Hablemos de tu próximo proyecto</h2>
+          <p class="contact-intro">
+            Cuéntanos qué necesitas en MDF o impresión 3D y te enviamos una propuesta personalizada.
+          </p>
+
+                    <form id="contactForm" class="contact-form">
+            <div class="field-row">
+              <input type="text" id="contactNombre" placeholder="Nombre completo" required />
+              <div></div>
+              <input type="email" id="contactEmail" placeholder="Correo electrónico" required />
+              <input type="numero" id="contactNumero" placeholder="Numero de Telefono" required />
+            </div>
+            <select id="contactTipo" required>
+              <option value="">Tipo de trabajo que buscas</option>
+              <option value="Llaveros en MDF">Llaveros en MDF</option>
+              <option value="Piezas en MDF">Piezas en MDF</option>
+              <option value="Impresión 3D">Impresión 3D</option>
+              <option value="Otro proyecto personalizado">Otro proyecto personalizado</option>
+            </select>
+            <textarea id="contactMensaje" rows="4" placeholder="Describe tu idea, cantidades aproximadas y fecha límite."></textarea>
+            <button class="btn btn-primary" type="submit">Enviar solicitud</button>
+          </form>
+        </div>
+
+        <!-- Columna derecha: info de contacto -->
+        <aside class="contact-side">
+          <div class="card info">
+            <span class="info-label">Contacto directo</span>
+            <h3>Print Lab</h3>
+            <p class="info-location">Guatemala · Atención Lun–Sáb</p>
+
+            <div class="info-block">
+              <p class="info-title">WhatsApp</p>
+              <p class="info-main info-whatsapp">+502 5532 2023</p>
+              <a class="info-link wa" href="https://wa.me/50255322023" target="_blank" rel="noopener">
+                Escribir por WhatsApp
+              </a>
+            </div>
+
+            <div class="info-block">
+              <p class="info-title">Instagram</p>
+              <p class="info-main info-instagram">@printlab_gt</p>
+              <a class="info-link ig" href="https://www.instagram.com/printlab_gt" target="_blank" rel="noopener">
+                Ver nuestro trabajo
+              </a>
+            </div>
+
+            <div class="info-block small">
+              <p class="info-title">Horario</p>
+              <p class="info-main info-hours">Lunes a sábado · 9:00 a 18:00</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© 2025 Print Lab. Todos los derechos reservados.</div>
+      <div class="social">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="Facebook">FB</a>
+        <a href="#" aria-label="WhatsApp">WA</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-dialog">
+      <button class="modal-close" aria-label="Cerrar">✖</button>
+      <div class="modal-grid">
+        <img id="mImg" alt="Detalle">
+        <div>
+          <h3 id="mTitle"></h3>
+          <p id="mDesc" class="muted"></p>
+          <div id="mTags" class="tags mt-2"></div>
+          <div class="modal-actions">
+            <a id="mPdf" class="btn btn-outline" target="_blank" rel="noopener">Ver PDF</a>
+            <a id="mModel" class="btn btn-outline" target="_blank" rel="noopener">Ver Modelo 3D</a>
+            <a href="#contacto" class="btn btn-primary">Cotizar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
